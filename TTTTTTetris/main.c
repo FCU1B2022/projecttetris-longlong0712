@@ -470,6 +470,29 @@ void HideCursor()
     SetConsoleCursorInfo(consoleHandle, &info);
 }
 
+void Count()
+{
+    while (1)
+    {
+        printf("Welcome to tetris.");
+        Sleep(3000);
+        system("cls");
+        printf("3");
+        Sleep(1000);
+        system("cls");
+        printf("2");
+        Sleep(1000);
+        system("cls");
+        printf("1");
+        Sleep(1000);
+        system("cls");
+        printf("GO!!!");
+        Sleep(1000);
+        system("cls");
+        break;
+    }
+}
+
 int main()
 {
     HideCursor();
@@ -500,22 +523,9 @@ int main()
     // printf("\e[?25l"); // hide cursor
 
     move(canvas, state.x, state.y, state.rotate, state.x, state.y, state.rotate, state.queue[0]);
-    while (1)
-    {
-        printf("3");
-        Sleep(1000);
-        system("cls");
-        printf("2");
-        Sleep(1000);
-        system("cls");
-        printf("1");
-        Sleep(1000);
-        system("cls");
-        printf("GO!!!");
-        Sleep(1000);
-        system("cls");
-        break;
-    }
+
+    Count();
+
     while (1)
     {
         logic(canvas, &state);
